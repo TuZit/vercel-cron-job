@@ -9,8 +9,6 @@ export async function GET(req, res) {
     `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${HANOIKEY}?apikey=${WEATHER_KEY}`
   );
   const forecastData = await forecastRequest.json();
-  console.log('bbbbbbbbbbbbbbbb', forecastData);
-  console.log('aaaaaaaaaaaaaa', JSON.stringify(forecastData));
 
   // Fetch random quote
   const randomQuote = await fetch('https://api.quotable.io/random').then(
